@@ -10,4 +10,4 @@ services:
       - RABBITMQ_DEFAULT_USER=rabbit
       - RABBITMQ_DEFAULT_PASS=rabbit
     volumes:
-      - ./:/scripts
+      - ./scripts:/scripts:ro
