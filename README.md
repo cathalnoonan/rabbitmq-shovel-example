@@ -2,17 +2,19 @@
 
 - A `docker-compose.yml` file to initiate a Rabbit MQ container.
 
-`app/` folder contains:
-- An example application that produces messages to a RabbitMQ instance.
-- An example application that consumes messages from the RabbitMQ instance (badly).
-   - This will be used to populate an "error" queue.
+- `app/` folder contains:
+   - An example application that produces messages to a RabbitMQ instance.
+   - An example application that consumes messages from the RabbitMQ instance (badly).
+      - This will be used to populate an "error" queue.
 
-`scripts/` folder contains:
-- Scripts related to the RabbitMQ Shovel plugin.
-  - 01_enable_shovel.sh
-  - 02_start_shovel.sh
-  - 03_stop_shovel.sh
-  - 99_check_shovel_status.sh
+- `scripts/` folder contains:
+   - Scripts related to the RabbitMQ Shovel plugin.
+     - 01_enable_shovel.sh
+     - 02_start_shovel.sh
+     - 03_stop_shovel.sh
+     - 99_check_shovel_status.sh
+
+---
 
 Each of the `.sh` scripts in the `scripts/` folder will be mounted in the RabbitMQ container at the `/scripts` directory.
 
@@ -34,6 +36,7 @@ While the docker compose environment is running, the RabbitMQ management interfa
 - Username: `rabbit`
 - Password: `rabbit`
 
+---
 
 ## Running the sample:
 1. Clone the repo
