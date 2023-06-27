@@ -63,6 +63,7 @@ While the docker compose environment is running, the RabbitMQ management interfa
    ```bash
    # In a new terminal window, from root of repo:
    cd ./app/RabbitMqShovelExample.Producer
+   dotnet run
 
    # ... After a few seconds, stop the application.
    CTRL+C
@@ -81,7 +82,7 @@ While the docker compose environment is running, the RabbitMQ management interfa
    #  ... If not, cd to `/scripts`.
 
    # Enable the shovel plugin.
-   ./01_enable.shovel.sh
+   ./01_enable_shovel.sh
 
    # Start the shovel to move items from `person_created_error` to `person_created`.
    # Important that the consumer is stopped at this point, or it will keep moving items back to the `person_created_error` queue.
