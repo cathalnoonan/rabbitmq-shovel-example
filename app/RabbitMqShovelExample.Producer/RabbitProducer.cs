@@ -2,13 +2,14 @@ using MassTransit;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace RabbitMqShovelExample.Producer
 {
     public interface IRabbitProducer
     {
-        Task ProduceAsync<T>(T item)
+        Task ProduceAsync<T>(T item, CancellationToken cancellationToken = default)
             where T : class;
     }
 
@@ -23,7 +24,7 @@ namespace RabbitMqShovelExample.Producer
             _bus = bus;
         }
 
-        public async Task ProduceAsync<T>(T item)
+        public async Task ProduceAsync<T>(T item, CancellationToken cancellationToken = default)
             where T : class
         {
             if (item is null)
@@ -33,7 +34,7 @@ namespace RabbitMqShovelExample.Producer
 
             try
             {
-                await _bus.Publish(item);
+                await _bus.Publish(item, cancellationToken);
                 _logger.LogInformation($"Produced message: {JsonConvert.SerializeObject(item)}");
             }
             catch (Exception ex)

@@ -1,0 +1,12 @@
+name: Test
+
+jobs:
+  test-dotnet:
+    name: Test (dotnet)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-dotnet@v3
+      - run: dotnet restore app
+      - run: dotnet build app --no-restore
+      - run: dotnet test app --no-build

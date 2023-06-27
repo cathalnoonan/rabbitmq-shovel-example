@@ -8,7 +8,6 @@ IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((context, services) =>
     {
         var configuration = context.Configuration;
-        services.AddRabbitOptions(configuration);
         services.AddMassTransit(busConfig =>
         {
             busConfig.UsingRabbitMq((ctx, busFactoryConfigurator) =>

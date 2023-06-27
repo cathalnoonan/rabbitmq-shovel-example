@@ -7,7 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMqShovelExample", "Ra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMqShovelExample.Consumer", "RabbitMqShovelExample.Consumer\RabbitMqShovelExample.Consumer.csproj", "{7534BC05-97F1-4718-AE94-0C3B9532A843}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMqShovelExample.Consumer.Tests", "RabbitMqShovelExample.Consumer.Tests\RabbitMqShovelExample.Consumer.Tests.csproj", "{653BFF29-97EC-49D6-B700-5EDF4D9D2571}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMqShovelExample.Producer", "RabbitMqShovelExample.Producer\RabbitMqShovelExample.Producer.csproj", "{5BD92E64-2153-4773-B29F-9406D8268F2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMqShovelExample.Producer.Tests", "RabbitMqShovelExample.Producer.Tests\RabbitMqShovelExample.Producer.Tests.csproj", "{C91E9BD3-897D-451C-B48B-4B45CD8E30A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,9 +30,17 @@ Global
 		{7534BC05-97F1-4718-AE94-0C3B9532A843}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7534BC05-97F1-4718-AE94-0C3B9532A843}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7534BC05-97F1-4718-AE94-0C3B9532A843}.Release|Any CPU.Build.0 = Release|Any CPU
+		{653BFF29-97EC-49D6-B700-5EDF4D9D2571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{653BFF29-97EC-49D6-B700-5EDF4D9D2571}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{653BFF29-97EC-49D6-B700-5EDF4D9D2571}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{653BFF29-97EC-49D6-B700-5EDF4D9D2571}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5BD92E64-2153-4773-B29F-9406D8268F2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5BD92E64-2153-4773-B29F-9406D8268F2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BD92E64-2153-4773-B29F-9406D8268F2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BD92E64-2153-4773-B29F-9406D8268F2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C91E9BD3-897D-451C-B48B-4B45CD8E30A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C91E9BD3-897D-451C-B48B-4B45CD8E30A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C91E9BD3-897D-451C-B48B-4B45CD8E30A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C91E9BD3-897D-451C-B48B-4B45CD8E30A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
