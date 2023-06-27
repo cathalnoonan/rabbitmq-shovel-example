@@ -1,11 +1,11 @@
 using MassTransit;
+using Microsoft.Extensions.Hosting;
 using RabbitMqShovelExample;
 using RabbitMqShovelExample.Consumer.Consumers;
 
 IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((context, services) =>
     {
-        services.AddRabbitOptions(context.Configuration);
         services.AddMassTransit(busRegConfig =>
         {
             var rabbitOptions = context.Configuration.GetRabbitOptions();

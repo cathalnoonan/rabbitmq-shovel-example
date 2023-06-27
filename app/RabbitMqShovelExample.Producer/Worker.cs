@@ -1,4 +1,8 @@
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using RabbitMqShovelExample.Models;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace RabbitMqShovelExample.Producer
 {
@@ -23,7 +27,7 @@ namespace RabbitMqShovelExample.Producer
                     LastName = Faker.Name.LastName(),
                 };
                 await _producer.ProduceAsync(message);
-                await Task.Delay(1000);
+                await Task.Delay(1000, stoppingToken);
             }
         }
 

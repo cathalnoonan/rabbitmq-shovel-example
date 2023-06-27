@@ -1,4 +1,6 @@
 using MassTransit;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using RabbitMqShovelExample;
 using RabbitMqShovelExample.Producer;
 

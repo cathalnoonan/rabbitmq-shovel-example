@@ -1,6 +1,10 @@
 using MassTransit;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using RabbitMqShovelExample.Models;
+using System;
+using System.Threading.Tasks;
 
 namespace RabbitMqShovelExample.Consumer.Consumers
 {

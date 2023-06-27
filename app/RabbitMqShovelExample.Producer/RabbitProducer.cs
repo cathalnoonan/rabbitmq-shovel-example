@@ -1,5 +1,8 @@
 using MassTransit;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using System;
+using System.Threading.Tasks;
 
 namespace RabbitMqShovelExample.Producer
 {
