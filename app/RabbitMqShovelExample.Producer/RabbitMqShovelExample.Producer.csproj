@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Faker.Data" Version="2.0.1" />
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
   </ItemGroup>
 
   <ItemGroup>
