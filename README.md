@@ -90,7 +90,7 @@ host machine at port `15672`.
    ```
 1. Go back to the terminal containing the Consumer project
    ```bash
-   # Stop the project
+   # Stop the application
    CTRL+C
    ```
 1. Open the RabbitMQ web interface, login, go to the queues.
@@ -159,7 +159,7 @@ host machine at port `15672`.
    ```
 1. Go back to the terminal containing the Consumer project
    ```bash
-   # Stop the project
+   # Stop the application
    CTRL+C
    ```
 1. Open the RabbitMQ web interface, login, go to the queues.
@@ -177,12 +177,12 @@ host machine at port `15672`.
    ./enable_shovel_gui.sh
    ```
 1. Go back to the RabbitMQ web interface, go to queues again, open the `person_created_error` queue.
-   - The section underneath "Move messages" should now contain a textbox to enter the name of a queue.
+   - The section underneath "Move messages" should now contain a textbox to enter the name of a queue to move all messages to.
       ![Move messages is enabled](./resources/move-messages-enabled.png)
-   - Enter `person_created` inside the textbox, click Move.
+   - Enter `person_created` inside the textbox, click "Move messages".
    - This will navigate back to the list of queues, and the messages will still be in the `person_created_error` queue.
       ![Messages still in the error queue](./resources/messages-still-in-error-queue.png)
    - After a few seconds, all messages will move from the `person_created_error` queue to the `person_created` queue.
       ![Messages moved out of the error queue](./resources/messages-moved-from-error-queue.png)
-   - Since the consumer project was stopped above, the messages will remain in the `person_created` queue.
-      - If this is not the case, make sure the consumer project is stopped and then attempt to move the messages again.
+   - Since the consumer application was stopped above, the messages will remain in the `person_created` queue.
+      - If this is not the case, make sure the consumer application is stopped and then attempt to move the messages again.
