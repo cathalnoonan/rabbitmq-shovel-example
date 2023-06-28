@@ -11,7 +11,7 @@ IHost host = Host.CreateDefaultBuilder(args)
             var rabbitOptions = context.Configuration.GetRabbitOptions();
             busRegConfig.UsingRabbitMq((ctx, cfg) =>
             {
-                cfg.Host(rabbitOptions.Host, hostOptions =>
+                cfg.Host(rabbitOptions.Host, /*"virtual_host_here",*/ hostOptions =>
                 {
                     hostOptions.Username(rabbitOptions.Username);
                     hostOptions.Password(rabbitOptions.Password);

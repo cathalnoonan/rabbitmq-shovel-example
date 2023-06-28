@@ -13,7 +13,7 @@ IHost host = Host.CreateDefaultBuilder(args)
             busConfig.UsingRabbitMq((ctx, busFactoryConfigurator) =>
             {
                 var rabbitOptions = configuration.GetRabbitOptions();
-                busFactoryConfigurator.Host(rabbitOptions.Host, hostConfigurator =>
+                busFactoryConfigurator.Host(rabbitOptions.Host, /*"virtual_host_here",*/ hostConfigurator =>
                 {
                     hostConfigurator.Username(rabbitOptions.Username);
                     hostConfigurator.Password(rabbitOptions.Password);
